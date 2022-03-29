@@ -16,18 +16,11 @@
         </tr>
       </thead>
       <tbody>
-        <tr>
-          <td>1.</td>
-          <td>Update software</td>
-          <td><div class="progress progress-xs"><div class="progress-bar progress-bar-danger" style="width: 55%"></div></div></td>
-          <td><span class="badge bg-danger">55%</span></td>
-        </tr>
-        <tr>
-          <td>2.</td>
-          <td>Clean database</td>
-          <td><div class="progress progress-xs"><div class="progress-bar bg-warning" style="width: 70%"></div></div></td>
-          <td><span class="badge bg-warning">70%</span></td>
-        </tr>
+        <form class="" action="{{route('save.notes')}}" method="post">
+          Post : <br><input type="text" name="name" value=""><br>
+          Description : <br><textarea name="description"></textarea>
+          <input type="submit" name="" value="submit">
+        </form>
       </tbody>
     </table>
   </div>
