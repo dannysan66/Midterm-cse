@@ -25,7 +25,6 @@
         <a href="{{ route('customer.create') }} " class="btn btn-warning">Update</a>
         <a href="{{ route('customer.destroy',['customer'=>$customer->id]) }}" class="btn btn-danger" onclick="event.preventDefault(); document.getElementById('submit-form').submit();">
         Delete</a>
-        <!-- This is ugly but who even cares anymore -->
         <form id="submit-form" action="{{ route('customer.destroy',['customer'=>$customer->id]) }}" method="POST" class="hidden">
             @csrf
             @method('DELETE')
