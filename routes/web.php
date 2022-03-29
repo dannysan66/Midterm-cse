@@ -40,5 +40,5 @@ Route::get('/hardware', function () {
 Route::get('/notes', function () {
     return view('notes');
     
-    URL::forceScheme('https');
+//     URL::forceScheme('https');
 });
