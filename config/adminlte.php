@@ -229,22 +229,31 @@ return [
             'text' => 'search',
         ],
         [
-            'text' => 'Employees',
-            'url'  => 'employees',
-            'icon' => 'far fa-fw fa-list-alt',
+            'text' => 'Manage Invoices',
+            'url'  => 'invoice',
+            'icon' => 'fas fa-fw fa-file',
         ],
         [
-            'text' => 'Hardware',
-            'url'  => 'hardware',
+            'text' => 'Manage Customers',
+            'url'  => 'customer',
+            'icon' => 'fas fa-fw fa-file',
+        ],
+        [
+            'text' => 'Manage Equipment',
+            'url'  => 'equipment',
             'icon' => 'fas fa-fw fa-calendar-alt',
         ],
         [
+            'text' => 'Manufacturers',
+            'url'  => 'manufacture',
+            'icon' => 'fas fa-fw fa-file',
+        ],
+        [
             'text' => 'Notes',
-            'url'  => 'notes',
-            'icon' => 'fas fa-fw fa-columns',
+            'url'  => 'note',
+            'icon' => 'fas fa-fw fa-file',
         ],
     ],
-
 /*
 |--------------------------------------------------------------------------
 | Menu Filters
