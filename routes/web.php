@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-
+use App\Http\Controller\NotesController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -12,28 +12,19 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
-
-    URL::forceScheme('https');
-
 Route::get('/db-migrate', function () {
     Artisan::call('migrate');
     echo Artisan::output();
 });
 
-Route::get('/db-test', function() {
+Route::get('/db-test', function () {
     try {
-        \DB::connection()->getPDO();
-        $db_name = \DB::connection()->getDatabaseName();
-        echo 'Database Connected: '.$db_name;
+         echo \DB::connection()->getDatabaseName();
     } catch (\Exception $e) {
-        echo 'None';
+          echo 'None';
     }
 });
 
-Route::get('/db-migrate', function() {
-    Artisan::call('migrate');
-    echo Artisan::output();
-});
 Route::get('/', function () {
     return view('welcome');
 });
@@ -48,5 +39,8 @@ Route::get('/hardware', function () {
 
 Route::get('/notes', function () {
     return view('notes');
-    
+
+    Route::get('/create-notes', [NotesController::class, 'create'])->name('notes.add');
+    Route::get('/create-notes', [NotesController::class, 'update'])->name('save.notes');
+    URL::forceScheme('https');
 });
