@@ -37,8 +37,8 @@ Route::get('/hardware', function () {
     return view('hardware');
 });
 
-Route::get('/notes', function () {
-    return view('notes');
+// Route::get('/notes', function () {
+//     return view('notes');
 
     Route::get('/create-notes', [NotesController::class, 'create'])->name('notes.add');
     Route::get('/create-notes', [NotesController::class, 'update'])->name('save.notes');
