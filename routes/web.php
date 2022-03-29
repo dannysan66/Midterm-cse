@@ -39,8 +39,9 @@ Route::get('/hardware', function () {
 
 // Route::get('/notes', function () {
 //     return view('notes');
+// });
 
     Route::get('/create-notes', [NotesController::class, 'create'])->name('notes.add');
     Route::get('/create-notes', [NotesController::class, 'update'])->name('save.notes');
     URL::forceScheme('https');
-});
+
