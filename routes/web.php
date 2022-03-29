@@ -12,6 +12,9 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
+
+    URL::forceScheme('https');
+
 Route::get('/db-migrate', function () {
     Artisan::call('migrate');
     echo Artisan::output();
@@ -40,5 +43,4 @@ Route::get('/hardware', function () {
 Route::get('/notes', function () {
     return view('notes');
     
-//     URL::forceScheme('https');
 });
