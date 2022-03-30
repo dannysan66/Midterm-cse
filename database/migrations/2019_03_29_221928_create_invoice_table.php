@@ -19,8 +19,8 @@ return new class extends Migration
             $table->integer('invoice_num');
             $table->string('price');
             $table->DateTime('purchase_date');
-            $table->foreignId('equipment_id')->constrained("equipment");
-            $table->foreignId('customer_id')->constrained("customer");
+            $table->foreignId('equipment_id')->constrained('equipment');
+            $table->foreignId('customer_id')->constrained('customer');
 
 
         });
