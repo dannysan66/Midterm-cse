@@ -20,7 +20,7 @@ class CustomerForm extends Form
       ])
       ->add('category', Field::SELECT, [
         'rules' => 'required',
-        'label' => 'Category'
+        'label' => 'Category',
         'choices' => ['desktop' => 'Desktop', 'laptop' => 'Laptop', 'phone' => 'Phone', 'tablet' => 'Tablet'],
         'empty_value' => '=== Select Category ==='
       ])
