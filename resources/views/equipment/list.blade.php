@@ -3,7 +3,7 @@
 @section('title', 'Buyers')
 
 @section('content_header')
-    <h1>List</h1>
+    <h1>Equipment</h1>
 @stop
 
 @section('content')
@@ -16,20 +16,21 @@
         </tr>
       </thead>
       <tbody>
-        @foreach($customer AS $customer)
+        @foreach($equipment AS $equipment)
         <tr>
-          <td>{{ $customer->id }}</td>
-          <td>{{ $customer->full_name }}</td>
-          <td>{{ $customer->phone_number }}</td>
-          <td>{{ $customer->email}}</td>
-          <td><a class="btn btn-default btn-sm" href="{{ route('customer.show',['customer'=>$customer->id]) }}" style="float:right;">View</a></td>
+          <td>{{ $equipment->id }}</td>
+          <td>{{ $equipment->name }}</td>
+          <td>{{ $equipment->specs }}</td>
+          <td>{{ $equipment->category }}</td>
+          <td>{{ $equipment->manufacture_id }}</td>
+          <td><a class="btn btn-default btn-sm" href="{{ route('equipment.show',['equipment'=>$equipment->id]) }}" style="float:right;">View</a></td>
         </tr>
         @endforeach
       </tbody>
     </table>
   </div>
 </div>
-<a href="{{ route('customer.create') }} " class="btn btn-primary" >Create</a>
+<a href="{{ route('equipment.create') }} " class="btn btn-primary" >Create</a>
 
 
 
