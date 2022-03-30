@@ -12,7 +12,7 @@
     <table id="table" class="table table-bordered sortable">
       <thead>
         <tr>
-          <th style="width: 10px">#</th><th>Name</th><th style="width: 40px">Action</th>
+          <th style="width: 10px">#</th><th>Name</th><th style="width: 40px">Phone Number</th><th style="width: 40px">Email</th>
         </tr>
       </thead>
       <tbody>
