@@ -4,6 +4,9 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Customer;
+use Kris\LaravelFormBuilder\FormBuilder;
+use App\Forms\CustomerForm;
+
 
 class CustomerController extends Controller
 {
@@ -12,7 +15,7 @@ class CustomerController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index(FormBuilder $)
     {
         $customer = Customer::all();
         return view('customer.list', compact('customer'));
@@ -23,9 +26,13 @@ class CustomerController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function create()
+    public function create(FormBuilder $formBuilder)
     {
-        return view('customer.create');
+        $form = $formBuilder->create(CustomerForm::class, [
+          'method' => 'POST',
+          'url' => route('customer.store')
+        ]);
+        return view('customer.create', compact('form'));
     }
 
     /**
@@ -34,20 +41,11 @@ class CustomerController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-     public function store(Request $request)
+     public function store(FormBuilder $formBuilder)
      {
-         $validated = $request->validate([
-              'full_name' => 'required',
-              'email' => 'required',
-              'phone_number' => 'required',
-         ]);
-
-         $customer = Customer::create([
-              'full_name' => $request->full_name, 
-              'email' => $request->email,
-              'phone_number' => $request->phone_number,
-         ]);
-
+         $form = $formBuilder->create(CustomerForm::class);
+         $form->redirectIfNotValid();
+         Customer::create($form->getFieldValues());
          return $this->index();
      }
 
