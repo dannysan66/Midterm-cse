@@ -13,7 +13,8 @@ class EquipmentController extends Controller
      */
     public function index()
     {
-        //
+      $equipment = Equipment::all();
+      return view('equipment.list', compact('equipment'));
     }
 
     /**
@@ -21,9 +22,13 @@ class EquipmentController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function create()
+    public function create(FormBuilder $formBuilder)
     {
-        //
+      $form = $formBuilder->create(EquipmentForm::class, [
+        'method' => 'POST',
+        'url' => route('equipment.store')
+      ]);
+      return view('equipment.create', compact('form'));
     }
 
     /**
@@ -32,9 +37,12 @@ class EquipmentController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(FormBuilder $formBuilder)
     {
-        //
+      $form = $formBuilder->create(EquipmentForm::class);
+      $form->redirectIfNotValid();
+      Equipment::create($form->getFieldValues());
+      return $this->index();
     }
 
     /**
@@ -45,7 +53,8 @@ class EquipmentController extends Controller
      */
     public function show($id)
     {
-        //
+      $equipment = Equipment::find($id);
+      return view('equipment.details', compact('equipment'));
     }
 
     /**
