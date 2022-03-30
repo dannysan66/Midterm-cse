@@ -26,7 +26,7 @@ class CustomerForm extends Form
       ])
       ->add('manufacture_id', Field::SELECT, [
         'rules' => 'required',
-        'label' => 'Manufacturer'
+        'label' => 'Manufacturer',
         'choices' => getManufacturers(),
         'empty_value' => '=== Select Manufacturer ==='
       ])
