@@ -17,10 +17,10 @@ return new class extends Migration
             $table->id();
             $table->timestamps();
             $table->string('name');
-            $table->id('support_email');
-            $table->id('support_phone');
-            $table->id('sales_email');
-            $table->id('sales_phone');
+            $table->string('support_email');
+            $table->string('support_phone');
+            $table->string('sales_email');
+            $table->string('sales_phone');
         });
     }
 
