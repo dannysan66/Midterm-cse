@@ -1,10 +1,10 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\CustomerController;
-use App\Http\Controllers\ManufacturerController;
-use App\Http\Controllers\EquipmentController;
-use App\Http\Controllers\InvoiceController;
+// use App\Http\Controllers\CustomerController;
+// use App\Http\Controllers\ManufacturerController;
+// use App\Http\Controllers\EquipmentController;
+// use App\Http\Controllers\InvoiceController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -29,11 +29,14 @@ Route::get('/db-test', function () {
 });
 
 
-Route::resource('/customer', CustomerController::class);
-Route::resource('/manufacturer', ManufacturerController::class);
-Route::resource('/equipment', EquipmentController::class);
-Route::resource('/invoice', InvoiceController::class);
+// Route::resource('/customer', CustomerController::class);
+// Route::resource('/manufacturer', ManufacturerController::class);
+// Route::resource('/equipment', EquipmentController::class);
+// Route::resource('/invoice', InvoiceController::class);
 
 Route::get('/', function () {
     return view('welcome');
 });
+
+URL::forceScheme('https');
+
