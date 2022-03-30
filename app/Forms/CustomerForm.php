@@ -21,5 +21,9 @@ class CustomerForm extends Form
         'rules' => 'required',
         'label' => 'Email'
       ])
+      ->add('submit', 'submit', [
+        'label' => 'Submit'
+      ]);
     }
 }
+
