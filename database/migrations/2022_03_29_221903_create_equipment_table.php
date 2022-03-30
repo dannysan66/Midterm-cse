@@ -20,7 +20,7 @@ return new class extends Migration
             $table->string('specs');
             $table->string('price');
             $table->enum('category', ['desktop', 'laptop', 'phone', 'tablet']);
-            $table->foreignId('manufacture_id')->constrained('manufacture');
+            $table->foreignId('manufacture_id')->constrained('manufacturers');
         });
     }
 
