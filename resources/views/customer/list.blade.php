@@ -20,6 +20,8 @@
         <tr>
           <td>{{ $customer->id }}</td>
           <td>{{ $customer->full_name }}</td>
+          <td>{{ $customer->phone_number }}</td>
+          <td>{{ $customer->email}}</td>
           <td><a class="btn btn-default btn-sm" href="{{ route('customer.show',['customer'=>$customer->id]) }}">View</a></td>
         </tr>
         @endforeach
