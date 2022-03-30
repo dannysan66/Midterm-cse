@@ -15,7 +15,7 @@ class CustomerController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index(FormBuilder $)
+    public function index()
     {
         $customer = Customer::all();
         return view('customer.list', compact('customer'));
