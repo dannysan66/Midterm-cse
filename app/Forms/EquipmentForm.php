@@ -27,7 +27,7 @@ class EquipmentForm extends Form
       ->add('manufacture_id', Field::SELECT, [
         'rules' => 'required',
         'label' => 'Manufacturer',
-        'choices' => getManufacturer(),
+        'choices' => getManufacturer_id(),
         'empty_value' => '=== Select Manufacturer ==='
       ])
 
