@@ -15,7 +15,7 @@
         </div>
         <dl class="row">
             <dt class="col-sm-3">Price</dt>
-            <dd class="col-sm-9">{{ $invoicet->specs }}</dd>
+            <dd class="col-sm-9">{{ $invoice->specs }}</dd>
 
             <dt class="col-sm-3">Purchase Date</dt>
             <dd class="col-sm-9">{{ $invoice->purchase_date }}</dd>
