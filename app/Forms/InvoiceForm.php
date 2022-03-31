@@ -14,7 +14,7 @@ class InvoiceForm extends Form
         'rules' => 'required',
         'label' => 'Name'
       ])
-      ->add('price', Field::TEXT, [
+      ->add('price', Field::NUMBER, [
         'rules' => 'required',
         'label' => 'Price'
       ])
