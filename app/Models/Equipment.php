@@ -13,8 +13,7 @@ class Equipment extends Model
         'name',
         'specs',
         'category',
-        'manufacturer_id'.
-        'invoice_id'
+        'manufacturer_id'
     ];
     protected $table = 'equipment';
 
@@ -33,3 +32,4 @@ class Equipment extends Model
         return $this->hasMany(Invoice::class);
     }
 }
+
