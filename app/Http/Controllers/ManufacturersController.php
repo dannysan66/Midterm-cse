@@ -3,6 +3,9 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\Manufacturer;
+use Kris\LaravelFormBuilder\FormBuilder;
+use App\Forms\ManufacturerForm;
 
 class ManufacturersController extends Controller
 {
@@ -13,7 +16,8 @@ class ManufacturersController extends Controller
      */
     public function index()
     {
-        //
+      $manufacturer = Manufacturer::all();
+      return view('manufacturer.list', compact('manufacturer'));
     }
 
     /**
@@ -23,7 +27,11 @@ class ManufacturersController extends Controller
      */
     public function create()
     {
-        //
+      $form = $formBuilder->create(ManufacturerForm::class, [
+        'method' => 'POST',
+        'url' => route('manufacturer.store')
+      ]);
+      return view('manufacturer.create', compact('form'));
     }
 
     /**
@@ -34,7 +42,10 @@ class ManufacturersController extends Controller
      */
     public function store(Request $request)
     {
-        //
+      $form = $formBuilder->create(ManufacturerForm::class);
+      $form->redirectIfNotValid();
+      manufacturer::create($form->getFieldValues());
+      return $this->index();
     }
 
     /**
@@ -45,7 +56,8 @@ class ManufacturersController extends Controller
      */
     public function show($id)
     {
-        //
+      $manufacturer = Manufacturer::find($id);
+      return view('manufacturer.details', compact('manufacturer'));
     }
 
     /**
