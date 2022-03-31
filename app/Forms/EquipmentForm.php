@@ -20,15 +20,11 @@ class EquipmentForm extends Form
       ])
       ->add('category', Field::SELECT, [
         'rules' => 'required',
-        'label' => 'Category',
-        'choices' => ['desktop' => 'Desktop', 'laptop' => 'Laptop', 'phone' => 'Phone', 'tablet' => 'Tablet'],
-        'empty_value' => '=== Select Category ==='
+        'label' => 'Category'
       ])
       ->add('manufacture_id', Field::SELECT, [
         'rules' => 'required',
-        'label' => 'Manufacturer',
-        'choices' => getManufacturer_Id(),
-        'empty_value' => '=== Select Manufacturer ==='
+        'label' => 'Manufacturer ID'
       ])
 
       ->add('submit', 'submit', [
@@ -36,3 +32,4 @@ class EquipmentForm extends Form
       ]);
     }
 }
+
