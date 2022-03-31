@@ -1,6 +1,6 @@
 @extends('adminlte::page')
 
-@section('title', 'Buyers')
+@section('title', 'Equipment')
 
 @section('content_header')
     <h1>Equipment</h1>
@@ -22,7 +22,7 @@
           <td>{{ $equipment->name }}</td>
           <td>{{ $equipment->specs }}</td>
           <td>{{ $equipment->category }}</td>
-          <td>{{ $equipment->manufacturer_id }}</td>
+          <td>{{ $equipment->manufacturer->name }}</td>
           <td><a class="btn btn-default btn-sm" href="{{ route('equipment.show',['equipment'=>$equipment->id]) }}" style="float:right;">View</a></td>
         </tr>
         @endforeach
@@ -31,3 +31,8 @@
   </div>
 </div>
 <a href="{{ route('equipment.create') }} " class="btn btn-primary" >Create</a>
+
+
+
+@stop
+
