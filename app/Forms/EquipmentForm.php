@@ -18,11 +18,11 @@ class EquipmentForm extends Form
         'rules' => 'required',
         'label' => 'Specs'
       ])
-      ->add('category', Field::SELECT, [
+      ->add('category', Field::TEXT, [
         'rules' => 'required',
         'label' => 'Category'
       ])
-      ->add('manufacture_id', Field::SELECT, [
+      ->add('manufacture_id', Field::TEXT, [
         'rules' => 'required',
         'label' => 'Manufacturer ID'
       ])
