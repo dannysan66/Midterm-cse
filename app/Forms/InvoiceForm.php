@@ -25,7 +25,7 @@ class InvoiceForm extends Form
       ->add('equipment_id', Field::SELECT, [
         'rules' => 'required',
         'label' => 'Equipment ID',
-        'choices' => getEquipment(),
+        'choices' => getEquipmentid(),
         'empty_value' => '=== Select Equipment Info ==='
       ])
       ->add('customer_id', Field::SELECT, [
