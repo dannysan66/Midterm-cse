@@ -250,7 +250,7 @@ return [
         ],
         [
             'text' => 'Notes',
-            'url'  => 'note',
+            'url'  => 'notes',
             'icon' => 'fas fa-fw fa-file',
         ],
     ],
