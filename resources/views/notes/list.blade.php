@@ -15,13 +15,13 @@
           <th style="width: 10px">#</th><th>Equipment ID</th><th style="width: 40px">Services</th><th style="width: 40px">Software</th>
       </thead>
       <tbody>
-        @foreach($notes AS $notes)
+        @foreach($notes AS $note)
         <tr>
-          <td>{{ $notes->id }}</td>
-          <td>{{ $notes->equipment_id }}</td>
-          <td>{{ $notes->services }}</td>
-          <td>{{ $notes->software }}</td>
-          <td><a class="btn btn-default btn-sm" href="{{ route('notes.show',['notes'=>$notes->id]) }}" style="float:right;">View</a></td>
+          <td>{{ $note->id }}</td>
+          <td>{{ $note->equipment_id }}</td>
+          <td>{{ $note->services }}</td>
+          <td>{{ $note->software }}</td>
+          <td><a class="btn btn-default btn-sm" href="{{ route('notes.show',['note'=>$note->id]) }}" style="float:right;">View</a></td>
         </tr>
         @endforeach
       </tbody>
