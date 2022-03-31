@@ -21,7 +21,7 @@ class EquipmentForm extends Form
       ->add('category', Field::SELECT, [
         'rules' => 'required',
         'label' => 'Category',
-        'choices' => ['desktop' => "Desktop", 'laptop' => "Laptop", 'phone' => "Phone", 'tablet' => "Tablet"
+        'choices' => ['desktop' => "Desktop", 'laptop' => "Laptop", 'phone' => "Phone", 'tablet' => "Tablet"]
         'empty_value' => '=== Select Category ==='
       ])
       ->add('manufacture_id', Field::NUMBER, [
