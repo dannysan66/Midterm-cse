@@ -12,7 +12,7 @@ class InvoiceForm extends Form
       $this->
       add('invoice_num', Field::NUMBER, [
         'rules' => 'required',
-        'label' => 'Name'
+        'label' => 'Invoice Number'
       ])
       ->add('price', Field::NUMBER, [
         'rules' => 'required',
