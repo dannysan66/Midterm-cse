@@ -18,13 +18,11 @@ class EquipmentForm extends Form
         'rules' => 'required',
         'label' => 'Specs'
       ])
-      ->add('category', Field::SELECT, [
+      ->add('category', Field::TEXT, [
         'rules' => 'required',
-        'label' => 'Category',
-        'choices' => ['desktop' => "Desktop", 'laptop' => "Laptop", 'phone' => "Phone", 'tablet' => "Tablet"],
-        'empty_value' => '=== Select Category ==='
+        'label' => 'Category'
       ])
-      ->add('manufacture_id', Field::NUMBER, [
+      ->add('manufacturer_id', Field::NUMBER, [
         'rules' => 'required',
         'label' => 'Manufacturer ID'
       ])
@@ -34,4 +32,5 @@ class EquipmentForm extends Form
       ]);
     }
 }
+
 
