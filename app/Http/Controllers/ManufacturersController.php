@@ -25,7 +25,7 @@ class ManufacturersController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function create()
+    public function create(FormBuilder $formBuilder)
     {
       $form = $formBuilder->create(ManufacturerForm::class, [
         'method' => 'POST',
@@ -40,7 +40,7 @@ class ManufacturersController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(FormBuilder $formBuilder)
     {
       $form = $formBuilder->create(ManufacturerForm::class);
       $form->redirectIfNotValid();
