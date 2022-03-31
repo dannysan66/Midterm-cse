@@ -2,7 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\CustomerController;
-use App\Http\Controllers\ManufacturerController;
+use App\Http\Controllers\ManufacturersController;
 use App\Http\Controllers\EquipmentController;
 use App\Http\Controllers\InvoiceController;
 // use App\Http\Controllers\NotesController;
@@ -31,7 +31,7 @@ Route::get('/db-test', function () {
 
 
 Route::resource('/customer', CustomerController::class);
-Route::resource('/manufacturer', ManufacturerController::class);
+Route::resource('/manufacturers', ManufacturersController::class);
 Route::resource('/equipment', EquipmentController::class);
 Route::resource('/invoice', InvoiceController::class);
 // Route::resource('/notes', NotesController::class);
