@@ -16,7 +16,7 @@ class Equipment extends Model
         'name',
         'specs',
         'category',
-        'manufacturer_id'
+        'manufacture_id'
     ];
     protected $table = 'equipment';
 
