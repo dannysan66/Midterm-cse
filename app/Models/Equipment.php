@@ -6,7 +6,7 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use App\Models\Invoice;
 use App\Models\Notes;
-use App\Models\Manufacturers;
+use App\Models\Manufacturer;
 
 class Equipment extends Model
 {
@@ -27,7 +27,7 @@ class Equipment extends Model
 
     public function manufacturer()
     {
-        return $this->belongsTo(Manufacturers::class);
+        return $this->belongsTo(Manufacturer::class);
     }
 
     public function invoice()
