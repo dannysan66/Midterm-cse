@@ -10,7 +10,7 @@ class InvoiceForm extends Form
     public function buildForm()
     {
       $this->
-      add('invoice_num', Field::TEXT, [
+      add('invoice_num', Field::NUMBER, [
         'rules' => 'required',
         'label' => 'Name'
       ])
