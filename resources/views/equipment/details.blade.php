@@ -21,7 +21,7 @@
             <dd class="col-sm-9">{{ $equipment->category }}</dd>
 
             <dt class="col-sm-3">Manufacturer ID</dt>
-            <dd class="col-sm-9">{{ $equipment->manufacture_id }}</dd>
+            <dd class="col-sm-9">{{ $equipment->manufacturer_id }}</dd>
         </dl>
     </div>
 @stop
