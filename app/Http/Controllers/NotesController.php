@@ -3,6 +3,9 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\Notes;
+use Kris\LaravelFormBuilder\FormBuilder;
+use App\Forms\NotesForm;
 
 class NotesController extends Controller
 {
@@ -13,7 +16,8 @@ class NotesController extends Controller
      */
     public function index()
     {
-        //
+      $notes = Notes::all();
+      return view('notes.list', compact('notes'));
     }
 
     /**
@@ -21,9 +25,13 @@ class NotesController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function create()
+    public function create(FormBuilder $formBuilder)
     {
-        //
+      $form = $formBuilder->create(NotesForm::class, [
+        'method' => 'POST',
+        'url' => route('notes.store')
+      ]);
+      return view('notes.create', compact('form'));
     }
 
     /**
@@ -32,9 +40,12 @@ class NotesController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(FormBuilder $formBuilder)
     {
-        //
+      $form = $formBuilder->create(NotesForm::class);
+      $form->redirectIfNotValid();
+      notes::create($form->getFieldValues());
+      return $this->index();
     }
 
     /**
@@ -45,7 +56,8 @@ class NotesController extends Controller
      */
     public function show($id)
     {
-        //
+      $notes = Notes::find($id);
+      return view('notes.details', compact('notes'));
     }
 
     /**
