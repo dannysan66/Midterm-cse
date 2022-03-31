@@ -18,9 +18,11 @@ class EquipmentForm extends Form
         'rules' => 'required',
         'label' => 'Specs'
       ])
-      ->add('category', Field::TEXT, [
+      ->add('category', Field::SELECT, [
         'rules' => 'required',
-        'label' => 'Category'
+        'label' => 'Category',
+        'choices' => ['desktop' => "Desktop", 'laptop' => "Laptop", 'phone' => "Phone", 'tablet' => "Tablet"
+        'empty_value' => '=== Select Category ==='
       ])
       ->add('manufacture_id', Field::NUMBER, [
         'rules' => 'required',
