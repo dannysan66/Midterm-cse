@@ -31,7 +31,7 @@ Route::get('/db-test', function () {
 
 
 Route::resource('/customer', CustomerController::class);
-Route::resource('/manufacturers', ManufacturersController::class);
+Route::resource('/manufacturer', ManufacturersController::class);
 Route::resource('/equipment', EquipmentController::class);
 Route::resource('/invoice', InvoiceController::class);
 // Route::resource('/notes', NotesController::class);
