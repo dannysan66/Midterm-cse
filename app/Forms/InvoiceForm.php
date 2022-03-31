@@ -14,7 +14,7 @@ class InvoiceForm extends Form
         'rules' => 'required',
         'label' => 'Invoice Number'
       ])
-      ->add('price', Field::NUMBER, [
+      ->add('price', Field::TEXT, [
         'rules' => 'required',
         'label' => 'Price'
       ])
@@ -22,13 +22,17 @@ class InvoiceForm extends Form
         'rules' => 'required',
         'label' => 'Purchase Date',
       ])
-      ->add('equipment_id', Field::TEXT, [
+      ->add('equipment_id', Field::SELECT, [
         'rules' => 'required',
-        'label' => 'Equipment',
+        'label' => 'Equipment ID',
+        'choices' => getEquipmentinfo(),
+        'empty_value' => '=== Select Equipment Info ==='
       ])
-      ->add('customer_id', Field::TEXT, [
+      ->add('customer_id', Field::SELECT, [
         'rules' => 'required',
-        'label' => 'Customer',
+        'label' => 'Custome ID',
+        'choices' => getCustomerid(),
+        'empty_value' => '=== Select Customer ID ==='
       ])
 
       ->add('submit', 'submit', [
