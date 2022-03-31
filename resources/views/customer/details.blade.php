@@ -22,6 +22,6 @@
         </dl>
     </div>
     <span style="float:right; margin-bottom: 10px;">
-      <a href="{{ route('customer.destroy' ['customer'=>$customer->id])}}" class="btn btn-danger" onclick="event.preventDefault(); document.getElementById('submit-form').submit();"></a>
+      <a href="{{ route('customer.destroy' ,['customer'=> $customer->id])}}" class="btn btn-danger" onclick="event.preventDefault(); document.getElementById('submit-form').submit();">Delete</a>
     </span>
 @stop
