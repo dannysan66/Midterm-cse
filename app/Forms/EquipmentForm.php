@@ -22,7 +22,7 @@ class EquipmentForm extends Form
         'rules' => 'required',
         'label' => 'Category'
       ])
-      ->add('manufacture_id', Field::TEXT, [
+      ->add('manufacture_id', Field::NUMBER, [
         'rules' => 'required',
         'label' => 'Manufacturer ID'
       ])
