@@ -16,7 +16,7 @@
         <dl class="row">
 
             <dt class="col-sm-3">Services</dt>
-            <dd class="col-sm-9">{{ $Notes->services}}</dd>
+            <dd class="col-sm-9">{{ $notes->services}}</dd>
 
             <dt class="col-sm-3">Software</dt>
             <dd class="col-sm-9">{{ $notes->software }}</dd>
