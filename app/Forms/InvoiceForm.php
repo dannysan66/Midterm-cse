@@ -22,11 +22,11 @@ class InvoiceForm extends Form
         'rules' => 'required',
         'label' => 'Purchase Date',
       ])
-      ->add('equipment_id', Field::SELECT, [
+      ->add('equipment_id', Field::TEXT, [
         'rules' => 'required',
         'label' => 'Equipment',
       ])
-      ->add('customer_id', Field::SELECT, [
+      ->add('customer_id', Field::TEXT, [
         'rules' => 'required',
         'label' => 'Customer',
       ])
