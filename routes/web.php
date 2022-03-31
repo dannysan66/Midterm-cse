@@ -5,7 +5,7 @@ use App\Http\Controllers\CustomerController;
 use App\Http\Controllers\ManufacturersController;
 use App\Http\Controllers\EquipmentController;
 use App\Http\Controllers\InvoiceController;
-// use App\Http\Controllers\NotesController;
+use App\Http\Controllers\NotesController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -34,7 +34,7 @@ Route::resource('/customer', CustomerController::class);
 Route::resource('/manufacturer', ManufacturersController::class);
 Route::resource('/equipment', EquipmentController::class);
 Route::resource('/invoice', InvoiceController::class);
-// Route::resource('/notes', NotesController::class);
+Route::resource('/notes', NotesController::class);
 
 Route::get('/', function () {
     return view('welcome');
